@@ -1,22 +1,24 @@
-######"api" in italian means "bees" 🐝🐝
+###### "api" in italian means "bees" 🐝🐝
 
-#👋 "Ciao" guys!
+# 👋 "Ciao" guys!
 
 In my first article I want to talk to you about blockchain (in the easiest way possible), and we will build one with nodejs and a few additional modules.
 
 
 Part 1 ➡️ what is a blockchain
+
 Part 2 ➡️ how it works 
+
 Part 3 ➡️ write some code
 
 
 
-#📜 what is a blockchain
+# 📜 what is a blockchain
 
 
 
 
-###🧱 block
+### 🧱 block
 Block means data.
 A block is the information that we want to store in the chain, made by two parts:
 * Data
@@ -28,11 +30,11 @@ An onbject, a transaction, a payment, a note, just an information!
 Core of the blockchain, is a criptographed message made with the data of the block, and the timestamp.
 If someone change illegaly the data of a block, the hash will change. This changing invalidate the blockchain, becouse the mechanism of validation recreate the hashes with the new data, that will be different from the previous hash.
 
-###🔗 chain
+### 🔗 chain
 Chain means storage.
 The chain is the place where we store the data, "sorted" by hash sequence
 
-#⚙️ how it works
+# ⚙️ how it works
 In the sempliest way to explain a block chain, we have to focus just in the hash and previoushash values of every single blocks.
 Keep calm, we will see soon what this values means!
 Our blockchain is drive by http request, with just few commands we can add new blocks, see the evidence of the blocks in the chain, invalidate or convalidate it. 
@@ -63,7 +65,7 @@ This is the centre of the blockchain mechanism!⚙️
 
 # 👨‍💻 write some code
 
-###🧰 tools we need
+### 🧰 tools we need
 * Nodejs
 * Express js
 * Crypto-js
@@ -252,28 +254,28 @@ app.listen(3000, function() {
 ```
 
 
-#🐝 API endpoints
-###show all endpoints and navigate to it
+# 🐝 API endpoints
+### show all endpoints and navigate to it
 ```
 GET "localhost:3000"
 ```
-###show the complete blockchain
+### show the complete blockchain
 ```
 GET "localhost:3000/chain"
 ```
-###add some data to the chain
+### add some data to the chain
 ```
 GET "localhost:3000/add?total=12"
 ```
-###check if blockchain is valid
+### check if blockchain is valid
 ```
 GET "localhost:3000/validate"
 ```
-###broke the chain changing second block value
+### broke the chain changing second block value
 ```
 GET "localhost:3000/corrupt"
 ```
-#🔨 HOW TO USE IT
+# 🔨 HOW TO USE IT
 * open the folder in your console
 * start the script with:
 ```
@@ -282,7 +284,7 @@ $ node main.js
 * open the browser on http://localhost:3000
 
 
-##🧟 simple usage
+## 🧟 simple usage
 * show the chain
 * add some other data
 * check if blockchain is corrupted
